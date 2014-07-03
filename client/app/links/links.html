@@ -1,7 +1,11 @@
 <div id='container'>
   <!-- Your html here -->
-  <div
+  <input ng-model="query">
   <ul>
-    <li ng-repeat = "link in data.links">{{ link.url }}</li>
+    <li ng-repeat = "link in data.links | filter:query">
+      <p>{{ link.title }}</p>
+      <p>{{ link.url }}</p>
+      <p>{{ link.visits }}</p>
+    </li>
   </ul>
 </div>
