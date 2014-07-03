@@ -2,10 +2,10 @@
   <!-- Your html here -->
   <input ng-model="query">
   <ul>
-    <li ng-repeat = "link in data.links | filter:query">
-      <p>{{ link.title }}</p>
+    <li ng-repeat = "link in data.links | orderBy:'-visits' | filter:query">
+      <header><a ng-href="/api/links/{{link.code}}">{{ link.title }}</a></header>
       <p>{{ link.url }}</p>
-      <p>{{ link.visits }}</p>
+      <footer>{{ link.visits }}</footer>
     </li>
   </ul>
 </div>

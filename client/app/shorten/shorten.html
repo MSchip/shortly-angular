@@ -1,8 +1,9 @@
 <div id='container'>
 <!-- Your code here -->
-  <form ng-submit="submit()">
-    <input type="text" ng-model="link.url" />
-    <input type="submit" id="submit" value="Submit" />
+  <form name="shortenForm" ng-submit="submit(shortenForm.$valid)" novalidate>
+    <input type="url" name="link" class="form-control" ng-model="link.url" required/>
+    <button type="submit" class="button shorten-button">Submit</button>
+    <p ng-hide="shortenForm.$valid">Not a valid URL in current state</p>
   </form>
 </div>
 
