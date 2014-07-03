@@ -14,8 +14,8 @@ angular.module('shortly.shorten', [])
         console.error(error);
       });
   };
-  // $scope.submit = function(){
-  //   $scope.addLink();
-  //   $scope.link = {};
-  // };
+  $scope.submit = function(){
+    $scope.addLink();
+    $scope.link = {};
+  };
 });
