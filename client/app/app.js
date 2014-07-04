@@ -17,11 +17,13 @@ angular.module('shortly', [
     })
     .when('/links', {
       templateUrl: 'app/links/links.html',
-      controller: 'LinksController'
+      controller: 'LinksController',
+      activetab: 'links'
     })
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
-      controller: 'ShortenController'
+      controller: 'ShortenController',
+      activetab: 'shorten'
     })
     .otherwise({redirectTo: '/signin'})
     // Your code here

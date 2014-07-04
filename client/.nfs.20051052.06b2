@@ -5,17 +5,20 @@
     <title>Shortly</title>
     <!-- <link rel="stylesheet" type="text/css" href="styles/style.css" /> -->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
   <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <div class="container">
       <h1>Shortly</h1>
-      <div class="navbar navbar-default" role="navigation" bs-navbar>
-        <ul class="nav navbar-nav">
-          <li data-match-route="/#/links"><a href="/#/links">Links</a></li>
-          <li data-match-route="/#/shorten"><a href="/#/shorten">Shorten</a></li>
-        </ul>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav nav-tabs" role="tablist">
+              <li><a href="/#/links">Links</a></li>
+              <li><a href="/#/shorten">Shorten</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->

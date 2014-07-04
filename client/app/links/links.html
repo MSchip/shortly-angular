@@ -1,11 +1,11 @@
 <div id='container'>
   <!-- Your html here -->
   <input ng-model="query">
-  <ul>
-    <li ng-repeat = "link in data.links | orderBy:'-visits' | filter:query">
-      <header><a ng-href="/api/links/{{link.code}}">{{ link.title }}</a></header>
-      <p>{{ link.url }}</p>
-      <footer>{{ link.visits }}</footer>
-    </li>
-  </ul>
+  <div class="list-group" ng-repeat = "link in data.links | orderBy:'-visits' | filter:query">
+    <a ng-href="/api/links/{{link.code}}" class="list-group-item-active">
+      <h4 class="list-group-item-heading">{{ link.title }}</h4>
+      <p class="list-group-item-text">{{ link.url }}</p>
+      <p class="list-group-item-text">{{ link.visits }}</p>
+    </a>
+  </div>
 </div>
